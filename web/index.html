@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Web Calculators</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #content{
+                font-family: Helvetica;
+                padding-left: 10%;
+            }
+            body{
+                background-color: #FFFFCC;
+            }
+            #forms{
+                border: solid red;
+                width: 425px;
+                padding-left: 5%;
+                padding-bottom: 20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h1>Dan's Calculator Emporium</h1>
+            <div id="forms">
+                <h2>Rectangle</h2>
+                <form name="rectangle" method="POST" action="PageGenerator?calculator=rectangle">
+                    <label>Rectangle Length</label>
+                    <input type='number' name='rectLength' value=""/><br>
+                    <label>Rectangle Width</label>
+                    <input type="number" name="rectWidth" value=""/><br>
+                    <input type="submit" >
+                </form>
+               
+                <h2>Circle</h2>
+                <form name="circle" method="POST" action="PageGenerator?calculator=circle">
+                    <label>Circle Radius</label>
+                    <input type="number" name="circleRadius" value=""/><br>
+                    <input type="submit">
+                </form>
+                
+                <h2>Triangle</h2>
+                <form name="triangle" method="POST" action="PageGenerator?calculator=triangle">
+                    <label>Triangle Base</label>
+                    <input type="number" name="triBase" value=""/><br>
+                    <label>Triangle Height</label>
+                    <input type="number" name="triHeight" value=""/><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
