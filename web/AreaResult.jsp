@@ -19,6 +19,7 @@
                 String areaResult=area.toString();
                 out.println("<h1>");
                 out.println("The result is "+areaResult);
+                out.println("</h1>")
             }else{
                 out.println("Critical Failure");
             }
