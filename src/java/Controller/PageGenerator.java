@@ -36,7 +36,7 @@ public class PageGenerator extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try {
             
             String calcType=request.getParameter("calculator");
             double result=0;
@@ -64,6 +64,8 @@ public class PageGenerator extends HttpServlet {
             request.setAttribute("result", result);
             RequestDispatcher view=request.getRequestDispatcher("/AreaResult.jsp");
             view.forward(request,response);
+        }catch(Exception e){
+            
         }
     }
 
