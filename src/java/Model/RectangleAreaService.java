@@ -5,10 +5,10 @@ package Model;
  * @author dvandenberge
  */
 public class RectangleAreaService {
-    public int getArea(String userLen,String userWid){
+    public double getArea(String userLen,String userWid){
         
-        int length=userLen!=null?Integer.parseInt(userLen):0;
-        int width=userWid!=null?Integer.parseInt(userWid):0;
+        double length=userLen!=null?Double.parseDouble(userLen):0;
+        double width=userWid!=null?Double.parseDouble(userWid):0;
         
         return length*width;
     }
